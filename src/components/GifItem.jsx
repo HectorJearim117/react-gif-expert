@@ -1,5 +1,3 @@
-
-
 export const GifItem = ({ id, url, title}) => {
   return (
     <div className="card">
