@@ -1,7 +1,8 @@
+import * as constants from '../constants/constants';
+
 export const getGifs = async(category) => {
 
-    const apiKey = 'wxzMJ8LSCQtaxaZiQ8Nv0Xi3m4faBkGy&q';
-    const url = `https://api.giphy.com/v1/gifs/search?api_key=${apiKey}=${category}&limit=10`;
+    const url = `${constants.API_BASEPATH}/search?api_key=${constants.API_KEY}=${category}&limit=10`;
     const resp = await fetch(url);
 
     const { data } = await resp.json();
